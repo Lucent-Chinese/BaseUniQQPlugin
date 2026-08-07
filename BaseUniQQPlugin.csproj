@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<EnableDynamicLoading>true</EnableDynamicLoading>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<OutputType>Library</OutputType>
+		<FodyWeaversXml>FodyWeavers.xml</FodyWeaversXml>
+	</PropertyGroup>
+
+	<!-- ========== Costura.Fody：自动嵌入所有依赖 ========== -->
+	<ItemGroup>
+		<PackageReference Include="Costura.Fody" Version="5.7.0">
+			<PrivateAssets>All</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="UniQQ.SDK">
+	    <HintPath>..\UniQQ.SDK\bin\Release\net10.0\UniQQ.SDK.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<!-- ========== 引用 UniQQ SDK（文件引用） ========== -->
+
+	<!-- ========== 示例：第三方库 ========== -->
+	<!-- 插件开发者按需添加 -->
+
+	<!-- ========== ✅ 把 plugin.json 复制到输出目录 ========== -->
+	<ItemGroup>
+		<None Update="plugin.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+	
+</Project>

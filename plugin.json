@@ -1,0 +1,24 @@
+﻿{
+  "id": "PluginDevTemplate",
+
+  "name": "插件模板",
+
+  "author": "Lucent",
+
+  "version": "1.0.0",
+
+  "description": "该插件作为插件开发者的模板使用",
+
+  "runtime": "dotnet",
+
+  "entry": "PluginDevTemplate.dll",
+
+  "sdkVersion": "1.0.0",
+
+  "MinFrameworkVersion": "1.0.0",
+
+  "architecture": "any",
+
+  "website": "http://uniqq.com"
+
+}
